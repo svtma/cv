@@ -1,6 +1,9 @@
 # Personal CV
 Silviu Toma's minimalist LaTeX CV – optimised for readability and print.
 
+<embed src="./output/cv.pdf" type="application/pdf" width="100%" height="600px" />
+
+
 # Setup instructions
 ### Install MacTex with:
 
@@ -8,5 +11,5 @@ Silviu Toma's minimalist LaTeX CV – optimised for readability and print.
 
 ### Compile CV with:
 
-`pdflatex src/cv`
+`pdflatex -output-directory=output src/cv.te`
 
