@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.2cm, vmargin=0.6cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.03\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{2pt plus 1pt minus 1pt}
+\setlength{\medskipamount}{4pt plus 1pt minus 1pt}
+\setlength{\bigskipamount}{8pt plus 1pt minus 1pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
+%\newcommand{\heading}[2]{\raggedright{\sffamily\Huge #1}\\\smallskip\titlerule\\\smallskip{\large{#2}}}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\entrytwo}[2]{\ #1 \hfill #2}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+
+% Name & headline
+
+    \heading{Silviu Toma}{Innovator and maker with 7 years of engineering experience\\\medskip
+    \footnotesize\faPhone +447435831463
+    \textperiodcentered{}
+    \footnotesize\faEnvelope{} \href{mailto:silviutoma2@gmail.com}{silviutoma2@gmail.com}
+    \textperiodcentered{}
+    \footnotesize\faGlobe{}  \href{https://www.silviutoma.com}{www.silviutoma.com}
+    \medskip
+
+    }
+
+%        \switchcolumn
+
+%% Identity card
+%%        \vspace{0.01\textheight}
+%        \begin{flushleft}
+%            \begin{supertabular}{rl}
+%            \tableentry{\footnotesize\faPhone}{+447435831463}{}
+%            \tableentry{\footnotesize\faEnvelope}{\href{mailto:silviutoma2@gmail.com}{silviutoma2@gmail.com}}{}
+%            \tableentry{\footnotesize\faGlobe}{\href{https://www.silviutoma.com}{www.silviutoma.com}}{}
+%            \end{supertabular}
+%        \end{flushleft}
+%%        \switchcolumn*
+
+% Education Section
+    \begin{paracol}{2}
+
+        \section{education}
+
+        \entry{University of Cambridge}{\textit{BEng, MEng, Information Engineering}}{Magdalene College}{\textit{2013 -- 2017}}
+        \begin{itemize}[noitemsep,leftmargin=5mm,rightmargin=0mm,topsep=0pt]
+            \item 1st Class for Master's Thesis
+            \item Award: Magdalene College Prize for Engineering
+            \item Award: Singapore Institute of Technology Scholarship
+        \end{itemize}
+
+        \smallskip
+        \entry{Tonbridge School}{\textit{Triple Mathematics(A*A*A*), Physics(A*), Chemistry(A)}}{Parkside House}{\textit{2011 -- 2013}}
+        \begin{itemize}[noitemsep,leftmargin=5mm,rightmargin=0mm,topsep=0pt]
+            \item HMC scholarship of excellence (more than £100k in tuition fees)
+            \item Award: Mathematics Scholarship for achievements in Olympiads
+        \end{itemize}
+        \switchcolumn
+
+% Core Skills Section
+        \section{core skills}
+        \bigskip
+        \begin{flushleft}
+            \begin{supertabular}{rl}
+                \tableentry{\footnotesize\faCode}{Clojure \textperiodcentered{} Java \textperiodcentered{} Kotlin }{}
+                \tableentry{}{Python \textperiodcentered{} Spring Boot \textperiodcentered{} Ktor}{}
+                \tableentry{\footnotesize\faDatabase \hspace{1}}{Postgres \textperiodcentered{} XTDB \textperiodcentered{} Redis}{}
+                \tableentry{}{AWS S3, SQS, SNS \textperiodcentered{} Kafka}{}
+
+                \tableentry{\footnotesize\faDocker}{AWS ECS, Lambdas \textperiodcentered{} Kubernetes}{}
+                \tableentry{}{Docker  \textperiodcentered{} Tilt \textperiodcentered{} Helm  \textperiodcentered{} Grafana}{}
+                \tableentry{}{Prometheus \textperiodcentered{} Loki \textperiodcentered{} Tempo }{}
+                \tableentry{\footnotesize\faAtlassian}{Agile \textperiodcentered{} GitHub \textperiodcentered{} Jira \textperiodcentered{} OpsGenie}{}
+            \end{supertabular}
+        \end{flushleft}
+    \end{paracol}
+
+% Professional Achievements Section
+    \section{professional achievements}
+
+    \entry{\href{https://nyaya.tech}{Nyaya}}{\textit{Software Engineer - Clojure}}{London, UK}{\textit{2023 -- present}}
+    \begin{itemize}[noitemsep,leftmargin=6mm,rightmargin=0mm,topsep=0pt]
+        \item Owned and delivered the main 2024 client release by leading a team of 3 senior engineers
+        \item Spearheaded the migration from XTDB to Postgres which increased the system performance by 10X
+        \item Streamlined the development process by building a local Tilt and K8s environment for our microservices
+        \item Improved the code maintainability by re-architecting a major service using Domain Driven Design, halving pull request duration
+    \end{itemize}
+
+    \smallskip
+    \entry{\href{https://teya.com}{Teya}}{\textit{Software Engineer - Java, Kotlin}}{London, UK}{\textit{2020 -- 2023}}
+    \begin{itemize}[noitemsep,leftmargin=6mm,rightmargin=0mm,topsep=0pt]
+        \item Built a Banking Service from idea to product, forecast to be Teya's second highest revenue stream
+        \item Enhanced my team's ability to proactively prevent incidents by leading the integration of observability best practices (logging, tracing, and dashboards) into development and deployment processes
+        \item Led my team's operability efforts by automating alerting and owning the on-call rota and runbook
+        \item Spread the adoption of Kotlin to more than 50 Teya engineers by building an open-source skeleton project, still used to bootstrap company-wide projects to date
+        \item Improved the team efficiency by outlining the developer onboarding process and mentoring new joiners
+        \item Introduced transactional support in our Ktor service which reduced data integrity errors by over 50\%
+        \item Built a Java-based Financial Auditing system to reduce payment errors using AWS infrastructure
+        \item Enhanced company-wide API standardisation by working with leaders to define API best practices
+    \end{itemize}
+
+    \smallskip
+    \entry{\href{https://teya.com}{Teya}}{\textit{Data Lead - Python}}{London, UK}{\textit{2020 (6 months)}}
+    \begin{itemize}[noitemsep,leftmargin=6mm,rightmargin=0mm,topsep=0pt]
+        \item Architected and built a proof-of-concept Python ML deployment pipeline that allowed payments forecasting and eliminated the company’s liquidity issues
+        \item Spearheaded a multi-million investment effort into a fraud detection company by analysing and operationalising their state-of-the-art machine learning algorithms
+    \end{itemize}
+
+    \smallskip
+    \entry{\href{https://www.cambridgeconsultants.com/home}{Cambridge Consultants}}{\textit{Senior Electronics Engineer - Python, Verilog}}{Cambridge, UK}{\textit{2017 -- 2020}}
+    \begin{itemize}[noitemsep,leftmargin=6mm,rightmargin=0mm,topsep=0pt]
+        \item Secured a multimillion-pound Internet of Things consulting project by leading a team of 9 engineers
+        \item Developed state-of-the-art mathematical models that led to the discovery of unprecedented spatial sensing technology
+        \item Designed, prototyped, programmed, and ran user tests for novel IoT devices using Python
+    \end{itemize}
+
+    \bigskip
+
+% Patents Section
+    \columnratio{0.25, 0.75}
+    \begin{paracol}{2}
+        \section{issued patents}
+        \switchcolumn
+        \bigskip
+        \medskip
+        \href{https://patents.google.com/patent/US10691208B2/en?inventor=silviu+toma}{US10691208B2}
+        \textperiodcentered{}
+        \href{https://patents.google.com/patent/WO2020156719A1/en?inventor=silviu+toma}{WO2020156719A1}
+        \textperiodcentered{}
+        \href{https://patents.google.com/patent/WO2020192955A1/en?inventor=silviu+toma}{WO2020192955A1}
+        -- ask me about them!
+
+    \end{paracol}
+
+
+% Add this at the end of the document
+\vfill % Pushes the following content to the bottom of the page
+\raggedright % Makes the text left-aligned
+\footnotesize \textit{*nationality: Romanian, British - ESTA eligible}% Small text at the bottom
+
+\end{document}
+
+
