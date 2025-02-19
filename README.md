@@ -1,7 +1,7 @@
 # Personal CV
 Silviu Toma's minimalist LaTeX CV – optimised for readability and print.
 
-<embed src="./output/cv.pdf" type="application/pdf" width="100%" height="600px" />
+[View the CV](./output/cv.pdf)
 
 
 # Setup instructions
